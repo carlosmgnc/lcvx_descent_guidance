@@ -114,7 +114,7 @@ class opt_problem:
       u_Nt = p.value
       return opt_cost, traj_Nt, u_Nt
 
-  #line search using golden section search
+  #line search for optimal time of flight using golden section search
   def opt_min_time(self):
     Nt_search = np.arange(self.Ntmin, self.Ntmax, 1)
     g = 2/(1+np.sqrt(5))
