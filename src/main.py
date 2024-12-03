@@ -163,7 +163,8 @@ base_z = traj[2, :-1] - q[2, :]
 
 #3d trajectory plot
 fig_traj_plot = plt.figure(2, figsize=(8, 8))
-fig_traj_plot.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+# fig_traj_plot.subplots_adjust(left=0.1, right=0.9, top=0.95, bottom=0.05)
+fig_traj_plot.tight_layout()
 ax = plt.axes(projection = '3d')
 ax.view_init(elev=15, azim=-160)
 ax.plot3D(traj[1,:], traj[2,:], traj[0,:])
@@ -234,7 +235,7 @@ plt.ylabel("cost (m/s)")
 ############################# animation #############################
 
 fig_anim = plt.figure(7, figsize=(8, 8))
-
+fig_anim.tight_layout()
 ax_anim = plt.axes(projection = '3d')
 ax_anim.view_init(elev=15, azim=-160)
 ax_anim.plot3D(traj[1,:], traj[2,:], traj[0,:], linestyle='--', linewidth=0.5, color='black')
@@ -258,8 +259,9 @@ anim_int = 50
 animation = FuncAnimation(fig_anim, update, frames= Nt_opt-1, interval= anim_int)
 
 fig_names = ['position', 'trajectory', 'throttle', 'thrusts', 'mass', 'cost_tof']
+
 for i in range(1, 7):
-  plt.figure(i).savefig("../images/" + fig_names[i-1] +  ".pdf")
+  plt.figure(i).savefig("../images/" + fig_names[i-1] +  ".png", dpi=300)
 
 animation.save('../images/animation.gif', writer='pillow', fps=1000/anim_int)
 
