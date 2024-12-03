@@ -11,5 +11,5 @@
 
 <div style="text-align: center;">
   <img src="images/mass.png" alt="mass" width="400" />
-  <img src="images/cost_tof" alt="cost" width="400" />
+  <img src="images/cost_tof.png" alt="cost" width="400" />
 </div>
