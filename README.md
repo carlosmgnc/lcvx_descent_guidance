@@ -8,3 +8,8 @@
   <img src="images/position.png" alt="position" width="400" />
   <img src="images/throttle.png" alt="throttle" width="400" />
 </div>
+
+<div style="text-align: center;">
+  <img src="images/mass.png" alt="mass" width="400" />
+  <img src="images/cost_tof" alt="cost" width="400" />
+</div>
